@@ -5,7 +5,8 @@ let clibsodiumTarget: Target
 #if os(OSX) || os(macOS) || os(tvOS) || os(watchOS) || os(iOS)
     clibsodiumTarget = .binaryTarget(
         name: "Clibsodium",
-        path: "Clibsodium.xcframework")
+        url: "https://github.com/own2pwn/swift-sodium-bin/releases/download/v1.0.18/Clibsodium.xcframework.zip",
+        checksum: "4e74f3f0d503bea607eb983daf7bf40a7e9bd8659c677756b709ddda923811ec")
 #else
     clibsodiumTarget = .systemLibrary(
         name: "Clibsodium",
